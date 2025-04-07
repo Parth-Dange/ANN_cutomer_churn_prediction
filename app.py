@@ -58,8 +58,8 @@ scaled_input = scaler.transform(input_df)
 
 prediction = model.predict(scaled_input)
 prediction_proba = prediction[0][0]
-
+st.write("Prediction Probability:", prediction_proba)
 if prediction_proba > 0.5:
-    st.write("this person churn")
+    st.write("This person is likely to churn")
 else:
-    st.write("this is not churning")
+    st.write("This person is not likely to churn")
